@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            color:black;
+            background-color: #17b9e2;
+            background-image: linear-gradient(100deg,#db9fce 0%,#8db0d8 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height:3;
+        
+           }
+form{
+    background-color: rgb(255, 255, 255);
+    max-width: 360px;
+    width:100%;
+    padding:58px 45px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 70, 139, 0.9);
+} .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px ;
+}
+.row label{
+    font-size:17px;
+}
+.row input{
+    flex:1;
+    padding: 13px;
+    border: 1px solid #450a7c;
+    border-radius: 5px;
+}
+.btn{
+    width: 100%;
+    padding: 9px;
+    font-size: 13px;
+    border: none;
+    border-radius: 25px;
+    background-color: #58e6c7b4;
+    cursor: pointer;
+    margin-top: 15px;
+}
+@media(max-width:458px)
+{
+    body{
+        margin: 0 18px;
+    }
+
+    form{
+        background-color: #f9faff;
+        border: none;
+        padding:20px 10px ;
+        box-shadow: none;
+    }
+}
+    </style> 
+</head>
+<body>
+    <h1>login</h1>
+     <form onsubmit="return validate()">
+        <div class="row">
+            <label>Username</label>
+            <input id="username" type="text" placeholder="Username"/>
+        </div>
+        <div class="row">
+            <label>Password</label>
+                <input id="Password" type="Password" placeholder="Enter Password"/>
+        </div>
+        <button class="btn">login</button>
+     </form>
+     <script>
+        function validate(){
+           var Username=document.getElementById("username").value;
+           var Password=document.getElementById("Password").value
+           var usernameCheck=/^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}$/
+                        //bhavana@gmail.com
+            console.log(Username,Password)
+            if(Username==" ")
+            [
+                alert("please enter username") 
+                return false    
+            ]
+            if(!username.match(usernameCheck))
+            {
+                alert("check your username")
+                return false
+            }
+            return true
+
+        }
+     </script>
+</body>
+</html>
